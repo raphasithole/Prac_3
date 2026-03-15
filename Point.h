@@ -1,0 +1,1 @@
+#ifndef POINT_H\n#define POINT_H\n\n#include <cmath>\n\nstruct Point {\n    float x;\n    float y;\n    \n    Point(float x_coord, float y_coord) : x(x_coord), y(y_coord) {}\n    \n    float distanceTo(const Point& other) const {\n        return std::sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));\n    }\n};\n\n#endif // POINT_H
